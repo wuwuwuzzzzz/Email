@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h2>账号激活</h2>
+    恭喜您已经注册成功，已经是XX网站会员，请点击链接<a
+        th:href="@{'http://'+${params.ip}+':'+${params.port}+'/'+${params.url}+'?activeCode='+${params.activeCode}+'&id='+${params.id}}"
+        th:text="'http://'+${params.ip}+':'+${params.port}+'/'+${params.url}+'?activeCode='+${params.activeCode}+'&id='+${params.id}"></a>完成激活
+</div>
+</body>
+</html>
